@@ -14,7 +14,7 @@ namespace XplatCollect.ViewModels
         public HomePageViewModel(INavigationService navigationService
             , IPageDialogService pageDialogService)
             : base(navigationService, pageDialogService)
-        {
+        { 
         }
 
         public string Title
@@ -24,4 +24,4 @@ namespace XplatCollect.ViewModels
         }
     }
 }
-}
+

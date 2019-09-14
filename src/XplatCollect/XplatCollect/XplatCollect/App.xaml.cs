@@ -25,7 +25,11 @@ namespace XplatCollect
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
+            containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<NewCollectionPage>();
+            containerRegistry.RegisterForNavigation<ProfilePage>();
             containerRegistry.RegisterForNavigation<HomePage>();
+            
 
         }
 
@@ -33,7 +37,7 @@ namespace XplatCollect
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync($"{nameof (NavigationPage)}/{nameof(HomePage)}");
+            await NavigationService.NavigateAsync($"{nameof (NavigationPage)}/{nameof(MainPage)}?selecteTab={nameof(HomePage)}");
         }
     }
 }
